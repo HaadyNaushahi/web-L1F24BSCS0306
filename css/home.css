@@ -1,0 +1,124 @@
+:root {
+    --court-blue = #1f6fd1;
+    --court-green: #2e8B57;
+    --ink: #14213d;
+    --paper: #f7f9fc;
+}
+
+* {
+    box-sizing: border-box;    
+}
+
+body {
+    margin: 0
+    font-family:: "Segoe UI", Roboto, Arial, sans-serif;
+    color: var(--paper);
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: var(--court-blue);
+    text-decoration: none;
+}
+
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: rgba(20, 33, 61, 0.75);
+    backdrop-filter: blur(6px);
+    color: ##FFF;
+}
+
+.logo {
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.logo span {
+    font-weight: 300;
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav a {
+    color: #fff;
+    padding: 0.3rem 0;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    border-color: #7fb8ff;
+}
+
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+    color: #fff;
+    background:
+    linear-gradient(rgba(10, 20, 40, 0.35), rgba(10, 20, 40, 0.75)),
+    url("../images/court-night.png") center / cover fixed;
+}
+
+.hero-content {
+    max-width: 640px;
+    animation: slowRise 1.4s ease-out both;
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size = 0.85rem;
+    color: #9fd0ff;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    line-height: 1.05;
+    margin: 0.3rem 0 1rem;;
+}
+
+.hero-text {
+    font-size: 1.15rem;
+    max-width: 52ch;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.9rem 2rem;
+    border-radius: 40px;
+    background: var(--court-blue);
+    color: #fff;
+    box-shafow: 0 8px 20px rgba(31, 111, 209, 0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+    trasnform: translateY(-3px);
+    box-shadow: 0 12px 26px rgba(31, 111, 209, 0.55);
+}
