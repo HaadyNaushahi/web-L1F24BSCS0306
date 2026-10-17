@@ -122,3 +122,23 @@ a {
     trasnform: translateY(-3px);
     box-shadow: 0 12px 26px rgba(31, 111, 209, 0.55);
 }
+
+
+.intro {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    padding: 6 rem 8%;
+}
+
+.intro-image img {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(20, 33, 61, 0.25);
+}
+
+.intro-text h2 {
+    font-size: 2.2rem;
+    margin-top: 0;
+}
