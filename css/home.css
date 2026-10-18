@@ -1,5 +1,5 @@
 :root {
-    --court-blue = #1f6fd1;
+    --court-blue: #1f6fd1;
     --court-green: #2e8B57;
     --ink: #14213d;
     --paper: #f7f9fc;
@@ -10,9 +10,10 @@
 }
 
 body {
-    margin: 0
-    font-family:: "Segoe UI", Roboto, Arial, sans-serif;
-    color: var(--paper);
+    margin: 0;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--paper);
     line-height: 1.6;
 }
 
@@ -38,7 +39,7 @@ a {
     padding: 1rem 5%;
     background: rgba(20, 33, 61, 0.75);
     backdrop-filter: blur(6px);
-    color: ##FFF;
+    color: #fff;
 }
 
 .logo {
@@ -80,8 +81,8 @@ a {
     padding: 0 8%;
     color: #fff;
     background:
-    linear-gradient(rgba(10, 20, 40, 0.35), rgba(10, 20, 40, 0.75)),
-    url("../images/court-night.png") center / cover fixed;
+	linear-gradient(rgba(10, 20, 40, 0.35), rgba(10, 20, 40, 0.75)),
+	url("../images/court-night.png") center / cover fixed;
 }
 
 .hero-content {
@@ -99,7 +100,7 @@ a {
 .hero h1 {
     font-size: clamp(2.5rem, 6vw, 4.5rem);
     line-height: 1.05;
-    margin: 0.3rem 0 1rem;;
+    margin: 0.3rem 0 1rem;
 }
 
 .hero-text {
@@ -114,12 +115,12 @@ a {
     border-radius: 40px;
     background: var(--court-blue);
     color: #fff;
-    box-shafow: 0 8px 20px rgba(31, 111, 209, 0.4);
+    box-shadow: 0 8px 20px rgba(31, 111, 209, 0.4);
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .btn:hover {
-    trasnform: translateY(-3px);
+    transform: translateY(-3px);
     box-shadow: 0 12px 26px rgba(31, 111, 209, 0.55);
 }
 
@@ -129,7 +130,7 @@ a {
     grid-template-columns: 1.1fr 1fr;
     gap: 4rem;
     align-items: center;
-    padding: 6 rem 8%;
+    padding: 6rem 8%;
 }
 
 .intro-image img {
@@ -235,4 +236,75 @@ footer nav {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+}
+
+footer a {
+    color: #9fd0ff;
+}
+
+
+@supports (animation-timeline: view()) {
+    .reveal {
+	animation: rise linear both;
+	animation-timeline: view();
+	animation-range: entry 0% cover 40%;
+    }
+}
+
+@keyframes rise {
+    from {
+	opacity: 0;
+	transform: translateY(60px);
+    }
+    to {
+	opacity: 1;
+	transform: none;
+    }
+}
+
+@keyframes slowRise {
+    from {
+	opacity: 0;
+	transform: translateY(30px);
+    }
+    to {
+	opacity: 1;
+	transform: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+	animation: none !important;
+    }
+}
+
+@media (max-width: 800px) {
+    .site-header {
+	flex-direction: column;
+	gap: -0.5rem;
+    }
+
+    .main-nav ul {
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 0.8rem;
+    }
+
+    .intro {
+	grid-template-columns: 1fr;
+	gap: 2rem;
+	padding: 4rem 6%;
+    }
+
+    .hero {
+	background-attachment: scroll;
+    }
+
+    .band-caption {
+	left: 5%;
+	right: 5%;
+	bottom: 5%;
+	max-width: none;
+    }
 }
