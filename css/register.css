@@ -55,3 +55,52 @@ a {
     border-radius: 6px;
 }
 
+
+main {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 2.5rem 5%;
+}
+
+h1 {
+    margin-bottom: 0.3rem;
+    color: var(--blue-deep);
+}
+
+.intro {
+    margin-top: 0;
+    color: #4a5a78;
+}
+
+.signup-form {
+    display: grid;
+    gap: 1.5rem;
+}
+
+fieldset {
+    display: grid;
+    gap: 1rem;
+    padding: 1.5rem;
+    border: 1px solid var(-line);
+    border-radius: 8px;
+    background: #fff;
+}
+
+legend {
+    padding: 0 0.4rem;
+    font-weight: bold;
+    color: var(--blue-deep);
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.field label {
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+
