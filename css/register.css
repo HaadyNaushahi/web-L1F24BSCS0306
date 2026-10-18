@@ -103,4 +103,73 @@ legend {
     font-size: 0.95rem;
 }
 
+.input, select, textarea {
+    padding: 0.6rem 0.8rem;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    font: inherit;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: 2px solid var(--blue);
+    outline-offset: 1px;
+}
+
+.choice {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.8rem;
+}
+
+button {
+    padding: 0.7rem 1.6rem;
+    border: none;
+    border-radius: 6px;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    background: var(--blue);
+    color: #fff;
+}
+
+button:hover {
+    background: var(--blue-deep);
+}
+
+button.secondary {
+    background: #e3ecf7;
+    color: var(--blue-deep);
+}
+
+buton.secondary:hover {
+    background: #d0dff0;
+}
+
+footer {
+    padding: 1.2rem 6%;
+    background: var(--navy);
+    color: #cfd8e6;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 700px) {
+    .site-header {
+	justify-content: center;
+	text-align: center;
+    }
+    .actions button {
+	flex; 1 1 100%;
+    }
+}
 
