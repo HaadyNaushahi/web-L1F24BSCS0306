@@ -14,7 +14,7 @@ body {
     font-family: Arial, sans-serif;
     color: var(--navy);
     background: #f5f9ff;
-    line-height: 1.6;;
+    line-height: 1.6;
 }
 
 a {
@@ -81,7 +81,7 @@ fieldset {
     display: grid;
     gap: 1rem;
     padding: 1.5rem;
-    border: 1px solid var(-line);
+    border: 1px solid var(--line);
     border-radius: 8px;
     background: #fff;
 }
@@ -148,7 +148,7 @@ button.secondary {
     color: var(--blue-deep);
 }
 
-buton.secondary:hover {
+button.secondary:hover {
     background: #d0dff0;
 }
 
@@ -169,7 +169,7 @@ footer p {
 	text-align: center;
     }
     .actions button {
-	flex; 1 1 100%;
+	flex: 1 1 100%;
     }
 }
 
